@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="code.css" type="text/css">
+    <title>Dt-Frontend Task</title>
+</head>
+
+<body>
+    <script>
+
+        //fetching data from provided json file
+        fetch('./data.json')
+            .then((apiData) => {
+                return apiData.json();
+            })
+            .then((actualData) => {
+                console.log(actualData);
+
+
+                //explore
+                let vs = document.getElementsByClassName("heading_explore");
+                console.log(vs[0].innerHTML = actualData.tasks[0].task_title);
+
+                let ve = document.getElementsByClassName("para_explore");
+                console.log(ve[0].innerHTML = actualData.tasks[0].task_description);
+
+
+                //  Technical project managment 
+                let el = document.getElementsByClassName("technical_header");
+                console.log(el[0].innerHTML = actualData.tasks[0].assets[0].asset_title);
+
+                let ev = document.getElementsByClassName("dec_para1");
+                console.log(ev[0].innerHTML = actualData.tasks[0].assets[0].asset_description);
+
+
+                //Threadbuild
+
+                let es = document.getElementsByClassName("technical_header2");
+                console.log(es[0].innerHTML = actualData.tasks[0].assets[1].asset_title);
+
+                let ee = document.getElementsByClassName("dec_para2");
+                console.log(ee[0].innerHTML = actualData.tasks[0].assets[1].asset_description);
+
+
+                //Structure your pointers
+                let ea = document.getElementsByClassName("technical_header3");
+                console.log(ea[0].innerHTML = actualData.tasks[0].assets[2].asset_title);
+
+                let ej = document.getElementsByClassName("dec_para3");
+                console.log(ej[0].innerHTML = actualData.tasks[0].assets[2].asset_description);
+
+
+                //4SA Method
+                let ek = document.getElementsByClassName("technical_header4");
+                console.log(ek[0].innerHTML = actualData.tasks[0].assets[3].asset_title);
+
+                let eo = document.getElementsByClassName("dec_para4");
+                console.log(eo[0].innerHTML = actualData.tasks[0].assets[3].asset_description);
+
+                //getting data for list
+                let ef = document.getElementsByClassName("head");
+                console.log(ef[0].innerHTML = actualData.tasks[0].task_title);
+
+                let fe = document.getElementsByClassName("list1");
+                console.log(fe[0].innerHTML = actualData.tasks[0].assets[0].asset_title);
+
+                let fg = document.getElementsByClassName("list2");
+                console.log(fg[0].innerHTML = actualData.tasks[0].assets[1].asset_title);
+
+                let fk = document.getElementsByClassName("list3");
+                console.log(fk[0].innerHTML = actualData.tasks[0].assets[2].asset_title);
+
+                let fn = document.getElementsByClassName("list4");
+                console.log(fn[0].innerHTML = actualData.tasks[0].assets[3].asset_title);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
+        //collapsable side bar
+        function collapse() {
+            let gf = document.getElementsByClassName("expand");
+            gf[0].style.display = "flex";
+        }
+
+    </script>
+
+
+    <div class="main">
+        <div class="rectangle_1">
+            <div class="image">
+                <img src="https://deepthought.education/assets/images/logo/logo.svg" alt="Dt-text"
+                    style="width: auto; height: 40px;">
+            </div>
+            <div class="icons1">
+                <i class="fa-solid fa-house fa-lg"></i>
+            </div>
+            <div class="icons2">
+                <i class="fa-solid fa-screwdriver-wrench fa-lg"></i>
+            </div>
+            <div class="icons3">
+                <i class="fa-sharp fa-solid fa-bell fa-lg"></i>
+            </div>
+            <div class="icons4">
+                <i class="fa-sharp fa-regular fa-grip-dots fa-lg"></i>
+            </div>
+            <div class="img">
+                <img src="attractive-beautiful-beauty-1376051" alt="Source">
+            </div>
+        </div>
+    </div>
+
+    <div class="side_bar">
+        <div class="total_bar">
+            <div class="upper_bar">
+            </div>
+            <button class="expand_btn" onclick="collapse()">1</button>
+        </div>
+        <div class="expand">
+            <div class="expand_head">
+                <p class="expand_para">Journey Board</p>
+                <ul>
+                    <li class="head"><b></b></li>
+                    <li class="list1"></li>
+                    <li class="list2"></li>
+                    <li class="list3"></li>
+                    <li class="list4"></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="side_bar2">
+        <div class="total_bar2">
+        </div>
+    </div>
+
+    <div class="side_vert">
+        <p class="vert_para"> Notice Board</p>
+    </div>
+
+    <div class="rectangle_2">
+        <div class="technical">
+            <h3><b>Technical Project Managment</b>
+            </h3>
+            <button class="button" type="submit">Submit Task</button>
+        </div>
+    </div>
+
+    <div class="rectangle_3">
+        <div class="explore">
+            <h6 class="heading_explore">
+                <strong></strong>
+            </h6>
+            <p class='para_explore'></p>
+        </div>
+    </div>
+    </div>
+
+    <div class="multiple">
+
+        <div class="rectangle_4">
+            <div class="technical_project">
+                <p class="technical_header"></p>
+                <div class="description">
+                    <p class="dec_para1"></p>
+                </div>
+            </div>
+
+            <div class="video_box">
+                <iframe src="https://www.youtube.com/embed/TiMRwri1xJ8" frameborder="0"
+                    style="width: 480px; height: 271px;"></iframe>
+            </div>
+        </div>
+
+
+
+
+        <div class="rectangle_5">
+            <div class="technical_project">
+                <p class="technical_header2"></p>
+            </div>
+
+            <div class="description">
+                <p class="dec_para2"></p>
+            </div>
+
+            <div class="thread">
+                <p class="thread_para">Thread A</p>
+                <div class="icon5">
+                    <i class="fa-sharp fa-solid fa-arrow-up"></i>
+                </div>
+            </div>
+
+            <div class="thread_text">
+                <div class="inner_thread">
+                    <p class="sub_para" style="position: absolute;left: 20px;">Sub thread 1</p>
+                </div>
+            </div>
+
+
+            <div class="thread_text1">
+                <div class="inner_thread">
+                    <p class="sub_para" style="position: absolute; left: 20px;">Sub interpretation 1</p>
+                </div>
+            </div>
+
+            <div class="select_arrow">
+                <p class="arrow_text" style="position: absolute;top: 5px;"><b>Select Categ</b></p>
+            </div>
+
+            <div class="select_arrow" style="left: 72%;">
+                <p class="arrow_text" style="position: absolute;top: 5px;""><b>Select Proces</b></p>
+            </div>
+
+            <div class=" sub_button">
+                    <button class="sub_btn">Sub thread</button>
+            </div>
+
+            <div class="dialogue_box">
+                <div class="dialogue_title">
+                    <p class="title_para" style="position: absolute; left: 20px;top: 5px;">Summary for thread A</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="rectangle_6">
+            <div class="technical_project">
+                <p class="technical_header3"></p>
+            </div>
+
+            <div class="description">
+                <p class="dec_para3"> </p>
+                <div class="small">
+                    <p class="small_para">Title</p>
+                </div>
+                <div class="small1">
+                    <p class="small_para">Content</p>
+                </div>
+            </div>
+            <div class="title_box">
+            </div>
+            <div class="content_box">
+                <p class="box_para1">File</p>
+                <p class="box_para2">Edit</p>
+                <p class="box_para3">View</p>
+                <p class="box_para4">Insert</p>
+                <p class="box_para5">Format</p>
+                <p class="box_para6">Tools</p>
+                <p class="box_para7">Table</p>
+                <p class="box_para8">Help</p>
+                <img src="http://www.clker.com/cliparts/Z/n/k/Z/y/j/left-arrow-gray-hi.png" class="left"
+                    style="width: 10px;" />
+                <img src="http://www.clker.com/cliparts/V/1/Z/A/h/U/left-arrow-right-hi.png" class="right"
+                    style="width: 10px;" />
+                <img src="https://cdn4.iconfinder.com/data/icons/resize-move-1/24/cross-over--512.png" class="cross"
+                    style="width: 17px;" />
+                <div class="para_boxer">
+                    <p class="dummy_para">Paragraph</p>
+                </div>
+                <div class="para_boxer2">
+                    <p class="dummy_para2"><b>...</b></p>
+                </div>
+            </div>
+
+            <div class="dialogue_box">
+            </div>
+        </div>
+
+        <div class="rectangle_7">
+            <div class="technical_project">
+                <p class="technical_header4"></p>
+            </div>
+
+            <div class="description">
+                <p class="dec_para4"></p>
+            </div>
+
+            <div class="title_box">
+                <p class="para">Introduction</p>
+                <div class="icon5" style="position: absolute; left: 25px; top: 12px;">
+                    <i class="fa-sharp fa-solid fa-arrow-up"></i>
+                </div>
+            </div>
+
+            <div class="content_box" style="top: 192px; background-color:white; box-shadow: none;">
+                <p class="tit_para">The 4SA Method , How to bring a idea into progress?</p>
+            </div>
+
+            <div class="title_box"
+                style="top: 315px; background: #FCFCFC; box-shadow: none; border: 1px solid #D9D7D7;">
+                <p class="thread_a_para">Thread A</p>
+                <div class="icon5">
+                    <i class="fa-sharp fa-solid fa-arrow-up" style="position: absolute; left: 10px; top:4px"></i>
+                </div>
+            </div>
+            <div class="content_box" style="top:380px; background: white; box-shadow: none;">
+                <p class="cont_para">How are you going to develop your stratergy ? Which method are you going to use to
+                    develop a stratergy ? What if the project is lengthy?</p>
+            </div>
+
+            <div class="title_box"
+                style="top: 500px; background: #FCFCFC; box-shadow: none; border: 1px solid #D9D7D7; width:380px; left: 70px;">
+                <p class="thread_a_para">Example 1</p>
+                <p class="last_sent" style="color: black;position: absolute; top: 50px; font-family: poppins;">You have a concept , How will you put into progress?</p>
+            </div>
+
+        </div>
+        <div class="last_img">
+            <div class="imges">
+                <img src="https://www.freeiconspng.com/uploads/question-mark-icon-jpg-18.jpeg" style="width: 100px;" />
+            </div>
+            <div class="imges2">
+                <img src="https://png.pngtree.com/png-vector/20190403/ourmid/pngtree-vector-meeting-icon-png-image_908702.jpg"
+                    style="width: 70px;" />
+            </div>
+
+            <div class="imges3">
+                <img src="https://www.clipartkey.com/mpngs/m/56-568971_calendar-icon-red-circle.png"
+                    style="width: 80px;" />
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
